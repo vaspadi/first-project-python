@@ -1,14 +1,10 @@
-firstName  = "Pavel"
-secondName = 'Vasiljev'
+person = {
+  'name': 'Pavel',
+  'age': 18,
+  'array': [1,2,3],
+  'object': {
+    'key1': 'value'
+  }
+}
 
-print('Your full name is ' + firstName + ' ' + secondName + '!')
-
-print('Your full name is', firstName, secondName)
-
-print("Your name is %a" %firstName)
-
-print('Your full name is {0} {1}' .format(firstName, secondName))
-
-print(f"Your full name is {firstName} {secondName}")
-
-print('1' + 1)
+print(person['object']['key1'])
