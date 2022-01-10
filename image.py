@@ -1,13 +1,31 @@
-from PIL import Image
+import main
 
-def bilde():
-  path = "images/mustang.jpeg"
+main.delete()
 
-  with Image.open(path) as img:
-    print(path, img.format, f"{img.size[0]}x{img.size[1]} {img.mode}")
-    img.resize((128, 128))
-    img.rotate(45)
-    img.show()
-    img.save('new-image.jpeg')
+class Ballite:
+  dekoracijas = ['cekuri', 'bumbinas']
+  ciemini = ''
+  ediens = ['kaposti', 'brokali']
+  tematika = '80tie gadi'
+  vel_davanas = ['telefons', 'konfectes']
 
-bilde()
+  def pirkumi(self):
+    for item in self.dekoracijas:
+      print('dekoracija: ', item)
+
+    for item in self.ediens:
+      print('ediens: ', item)
+
+  def davanas(self):
+    davanas = self.vel_davanas
+
+    for davana in davanas:
+      print('davana: ', davana)
+
+
+elem = Ballite()
+
+elem.pirkumi()
+elem.davanas()
+print('tematika: ', elem.tematika)
+print('ciemini: ', elem.ciemini)
