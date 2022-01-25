@@ -1,23 +1,26 @@
 from replit import db
 
 def add(key='', value=''):
-  title = 'Добавление -'
-  
   if (key == ''):
-    key = input(title + ' Введите ключ: ')
+    key = input('Adding - Введите ключ: ')
 
   if (value == ''):
-    value = input(title + ' Введите значение: ')
+    value = input('Adding - Введите значение: ')
 
   db[key] = value
   
-  print(title + ' success')
+  print(f"Поле {key} было добавлено. Значение: {value}")
 
 def delete(key=''):
-  title = 'Удаление -'
   if (key == ''):
-    key = input (title + ' Введите ключ: ')
+    key = input ('Removing - Введите ключ: ')
 
   del db[key]
 
-  print(title + ' success')
+  print(f"Поле {key} было удалено")
+
+def dbLog():
+  for key in db:
+    print(f"db - {key}: {db[key]}")
+
+dbLog()

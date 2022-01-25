@@ -1,7 +1,3 @@
-import main
-
-main.delete()
-
 class Ballite:
   dekoracijas = ['cekuri', 'bumbinas']
   ciemini = ''
